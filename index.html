@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Civicia</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  <h1>Civicia</h1>
+  <p>Étude sur l’usage de l’IA</p>
+
+  <canvas id="chart"></canvas>
+
+  <script>
+    const ctx = document.getElementById('chart');
+
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['2024','2025','2026','2027'],
+        datasets: [{
+          label: 'Usage IA (%)',
+          data: [20, 30, 40, 48],
+          borderWidth: 2
+        }]
+      }
+    });
+  </script>
+</body>
+</html>
