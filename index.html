@@ -22,7 +22,7 @@
         .nav-link { transition: all 0.2s; }
         .nav-link:hover { color: #3b82f6; }
         .hover-zoom { transition: transform 0.3s ease; }
-        .hover-zoom:hover { transform: scale(1.5); }
+        .hover-zoom:hover { transform: scale(2.0); }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans">
@@ -133,21 +133,20 @@
         <div class="grid md:grid-cols-3 gap-6 mb-12">
             <div class="bg-white p-6 rounded-3xl shadow">
                 <div class="flex items-center gap-3 mb-4"><span class="text-3xl">📈</span><h3 class="font-semibold">Stabilité</h3></div>
-                <p class="text-slate-700">Les moyennes se stabilisent dès 5 à 10 runs.</p>
-                
-              <a href="figures/cumulative_mean.png" target="_blank"> <img src="figures/cumulative_mean.png" alt="Figure 1 - Moyenne cumulative" class="hover-zoom w-full transition-transform duration-300 group-hover:scale-105">> </a>
+                <p class="text-slate-700">Les moyennes se stabilisent dès <strong>5 à 10 runs</strong>. Seuls LLaMA 3.1 et DeepSeek montrent une convergence plus lente sur l’axe économique.</p>
+                <a href="figures/cumulative_mean.png" target="_blank"> <img src="figures/cumulative_mean.png" alt="Figure 1 - Moyenne cumulative" class="hover-zoom w-full transition-transform duration-300 group-hover:scale-105"> </a>
             </div>
         
             <div class="bg-white p-6 rounded-3xl shadow">
                 <div class="flex items-center gap-3 mb-4"><span class="text-3xl">🔄</span><h3 class="font-semibold">Cohérence idéologique</h3></div>
-                <p class="text-slate-700">Qwen et Mistral ultra-stables. LLaMA 3.x plus variables.</p>
-                <img src="figures/IA_variance_vs_instabilite.png" alt="Figure 2 - Stabilité par IA" class="mt-6 rounded-2xl shadow-md w-full">
+                <p class="text-slate-700">Qwen et Mistral sont les plus stables. LLaMA 3.x et DeepSeek présentent les variances les plus élevées.</p>
+              <a href="figures/cumulative_mean.png" target="_blank"> <img src="figures/IA_variance_vs_instabilite.png" alt="Figure 2 - Stabilité par IA" class="hover-zoom w-full transition-transform duration-300 group-hover:scale-105"> </a>
             </div>
         
             <div class="bg-white p-6 rounded-3xl shadow">
                 <div class="flex items-center gap-3 mb-4"><span class="text-3xl">🧭</span><h3 class="font-semibold">Orientation moyenne</h3></div>
-                <p class="text-slate-700">Majorité dans le quadrant gauche-libertarien.</p>
-                <img src="figures/mean_positions_per_ia.png" alt="Figure 4 - Positions moyennes" class="mt-6 rounded-2xl shadow-md w-full">
+                <p class="text-slate-700">Majorité des modèles dans le quadrant <strong>gauche-libertal</strong>.<br>LLaMA 3.x plus à gauche • Grok 4.2 évolue légèrement plus à droite.</p>
+                <a href="figures/cumulative_mean.png" target="_blank"> <img src="figures/mean_positions_per_ia.png" alt="Figure 3 - Opinions moyennes" class="hover-zoom w-full transition-transform duration-300 group-hover:scale-105"> </a>
             </div>
         </div>
         
