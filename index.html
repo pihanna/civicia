@@ -103,7 +103,7 @@
         <div class="bg-slate-100 border border-slate-200 rounded-3xl p-8 mb-12">
             <h2 class="uppercase text-xs tracking-widest font-medium mb-3">Résumé</h2>
             <p class="text-slate-700">
-                Cette étude explore la stabilité et l’orientation idéologique des réponses politiques produites par 12 modèles de langage de grande taille (LLMs) en français. Chaque modèle a été testé sur 20 exécutions indépendantes avec un prompt strictement contraint inspiré du Political Compass. 
+                Cette étude explore la stabilité et l’orientation idéologique des réponses politiques produites par 11 modèles de langage de grande taille (LLMs) en français. Chaque modèle a été testé sur 20 exécutions indépendantes avec un prompt strictement contraint inspiré du Political Compass. 
                 <strong>Résultat majeur :</strong> une cohérence idéologique notable et une convergence majoritaire dans le quadrant gauche-libertarien, avec des variations significatives selon les modèles et les versions.
             </p>
         </div>
@@ -126,13 +126,36 @@
             </div>
         </div>
 
+        <!-- RÉSULTATS CLÉS + FIGURES -->
+        <h2 class="text-3xl font-bold mb-8">Résultats clés</h2>
+        <div class="grid md:grid-cols-3 gap-6 mb-12">
+            <div class="bg-white p-6 rounded-3xl shadow">
+                <div class="flex items-center gap-3 mb-4"><span class="text-3xl">📈</span><h3 class="font-semibold">Stabilité</h3></div>
+                <p class="text-slate-700">Les moyennes se stabilisent dès 5 à 10 runs.</p>
+                <img src="figures/cumulative_mean.png" alt="Figure 1 - Moyenne cumulative" class="mt-6 rounded-2xl shadow-md w-full">
+            </div>
+        
+            <div class="bg-white p-6 rounded-3xl shadow">
+                <div class="flex items-center gap-3 mb-4"><span class="text-3xl">🔄</span><h3 class="font-semibold">Cohérence idéologique</h3></div>
+                <p class="text-slate-700">Qwen et Mistral ultra-stables. LLaMA 3.x plus variables.</p>
+                <img src="figures/IA_variance_vs_instabilite.png" alt="Figure 2 - Stabilité par IA" class="mt-6 rounded-2xl shadow-md w-full">
+            </div>
+        
+            <div class="bg-white p-6 rounded-3xl shadow">
+                <div class="flex items-center gap-3 mb-4"><span class="text-3xl">🧭</span><h3 class="font-semibold">Orientation moyenne</h3></div>
+                <p class="text-slate-700">Majorité dans le quadrant gauche-libertarien.</p>
+                <img src="figures/mean_positions_per_ia.png" alt="Figure 4 - Positions moyennes" class="mt-6 rounded-2xl shadow-md w-full">
+            </div>
+        </div>
+        
+      
         <div class="bg-amber-50 border border-amber-200 rounded-3xl p-8 mb-12">
             <h3 class="font-semibold mb-3">Point d’attention : Grok</h3>
             <p class="text-slate-700">Grok (4.1 et 4.2) montre une variabilité plus marquée sur les questions de liberté d’expression et d’ordre social (Q11, Q24, Q37). Déplacement mesurable entre les deux versions.</p>
         </div>
 
         <!-- Modèles testés -->
-        <h2 class="text-3xl font-bold mb-6 mt-16">Les 12 modèles testés</h2>
+        <h2 class="text-3xl font-bold mb-6 mt-16">Les 11 modèles testés</h2>
         <div class="overflow-x-auto mb-16">
             <table class="w-full text-sm bg-white rounded-3xl shadow overflow-hidden">
                 <thead class="bg-slate-100">
