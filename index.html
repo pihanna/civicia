@@ -1,31 +1,129 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Civicia</title>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etude LLM - Stabilité et Orientation Politique</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        }
+        .card {
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
 </head>
+<body class="bg-gray-50 font-sans text-gray-900">
 
-<body>
-  <h1>Civicia</h1>
-  <p>Étude sur l’usage de l’IA</p>
+    <header class="gradient-bg text-white py-16 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-3xl md:text-5xl font-bold mb-6">
+                Stabilité et orientation moyenne des réponses politiques de modèles de langage
+            </h1>
+            <p class="text-xl mb-8 opacity-90">Une étude exploratoire multi-runs en français</p>
+            <div class="flex flex-wrap justify-center gap-4 text-sm font-medium">
+                <span class="bg-white/20 px-4 py-2 rounded-full">Gabriel HANNA</span>
+                <span class="bg-white/20 px-4 py-2 rounded-full">Pierre HANNA</span>
+            </div>
+            <div class="mt-10">
+                <a href="paper.pdf" target="_blank" class="bg-white text-blue-700 font-bold py-3 px-8 rounded-lg shadow-lg hover:bg-blue-50 transition">
+                    <i class="fas fa-file-pdf mr-2"></i> Lire l'article complet
+                </a>
+            </div>
+        </div>
+    </header>
 
-  <canvas id="chart"></canvas>
+    <main class="max-w-5xl mx-auto px-4 py-12">
+        
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold border-b-4 border-blue-500 inline-block mb-6">Résumé</h2>
+            <div class="bg-white p-8 rounded-xl shadow-sm italic leading-relaxed text-gray-700">
+                "Cette étude explore la stabilité et l'orientation idéologique des réponses politiques produites par 
+                différents modèles de langage (LLMs) en français. À l'aide d'un protocole standardisé basé sur le 
+                Political Compass, nous avons testé 11 modèles sur 20 exécutions indépendantes pour quantifier 
+                leur variabilité et leur positionnement."
+            </div>
+        </section>
 
-  <script>
-    const ctx = document.getElementById('chart');
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold border-b-4 border-blue-500 inline-block mb-8">Protocole Expérimental</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="card bg-white p-6 rounded-lg shadow-sm border-t-4 border-blue-400">
+                    <i class="fas fa-microchip text-3xl text-blue-500 mb-4"></i>
+                    <h3 class="font-bold mb-2">12 Modèles Testés</h3>
+                    <p class="text-sm text-gray-600">GPT-4, Gemini, Mistral, LLaMA, Qwen, Grok, et d'autres modèles issus d'horizons variés.</p>
+                </div>
+                <div class="card bg-white p-6 rounded-lg shadow-sm border-t-4 border-blue-400">
+                    <i class="fas fa-redo text-3xl text-blue-500 mb-4"></i>
+                    <h3 class="font-bold mb-2">Approche Multi-runs</h3>
+                    <p class="text-sm text-gray-600">20 exécutions indépendantes par modèle pour sortir du caractère aléatoire de la génération.</p>
+                </div>
+                <div class="card bg-white p-6 rounded-lg shadow-sm border-t-4 border-blue-400">
+                    <i class="fas fa-list-check text-3xl text-blue-500 mb-4"></i>
+                    <h3 class="font-bold mb-2">62 Affirmations</h3>
+                    <p class="text-sm text-gray-600">Utilisation du test Political Compass pour mesurer les axes économiques et socio-culturels.</p>
+                </div>
+            </div>
+        </section>
 
-    new Chart(ctx, {
-      type: 'line',
-      data: {
-        labels: ['2024','2025','2026','2027'],
-        datasets: [{
-          label: 'Usage IA (%)',
-          data: [20, 30, 40, 48],
-          borderWidth: 2
-        }]
-      }
-    });
-  </script>
+        <section class="mb-16 bg-blue-50 p-8 rounded-2xl">
+            <h2 class="text-2xl font-bold mb-8">Résultats Clés</h2>
+            <div class="space-y-8">
+                <div class="flex items-start gap-4">
+                    <div class="bg-blue-500 text-white p-2 rounded-full mt-1">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg">Stabilité statistique</h3>
+                        <p class="text-gray-700">La plupart des modèles stabilisent leur réponse moyenne dès 5 à 10 runs. L'approche à 20 runs confirme une réelle robustesse des tendances observées.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="bg-blue-500 text-white p-2 rounded-full mt-1">
+                        <i class="fas fa-compass"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg">Orientation "Gauche-Libertaire"</h3>
+                        <p class="text-gray-700">Une majorité de modèles (notamment ChatGPT et Gemini) se positionne dans le quadrant sud-ouest du Political Compass, une tendance persistante en français.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="bg-blue-500 text-white p-2 rounded-full mt-1">
+                        <i class="fas fa-shield-halved"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg">Refus et Neutralité</h3>
+                        <p class="text-gray-700">L'étude met en évidence le cas particulier de Claude (Anthropic), qui refuse systématiquement de répondre aux questions politiquement orientées dans un format contraint.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="text-center py-10">
+            <h2 class="text-xl font-semibold mb-4">Envie d'approfondir ?</h2>
+            <p class="text-gray-600 mb-6">Téléchargez les données brutes ou consultez les annexes sur le dépôt GitHub.</p>
+            <div class="flex justify-center gap-6">
+                <a href="#" class="text-blue-600 hover:underline font-medium">
+                    <i class="fab fa-github"></i> Voir le code Python
+                </a>
+                <a href="mailto:prenom.nom@free.fr" class="text-blue-600 hover:underline font-medium">
+                    <i class="fas fa-envelope"></i> Contacter les auteurs
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-100 py-8 border-t border-gray-200">
+        <div class="max-w-5xl mx-auto px-4 text-center text-sm text-gray-500">
+            © 2026 - 33170 Gradignan
+        </div>
+    </footer>
+
 </body>
 </html>
