@@ -22,7 +22,7 @@
         .nav-link { transition: all 0.2s; }
         .nav-link:hover { color: #3b82f6; }
         .hover-zoom { transition: transform 0.3s ease; }
-        .hover-zoom:hover { transform: scale(2.0); }
+        .hover-zoom:hover { transform: scale(1.5); }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans">
@@ -121,18 +121,16 @@
         </div>
 
         <p class="text-slate-700 mb-3">
-            Lorsqu’on répète plusieurs fois exactement la même question à une IA, on pourrait s’attendre à des réponses très variables.
-            Pourtant, les résultats montrent l’inverse : les positions politiques moyennes des modèles se stabilisent rapidement.
+            Lorsqu’on répète plusieurs fois exactement la même question à une IA, on n'obtient pas les mêmes réponses. Sur le plan politique, 
+            on pourrait s’attendre à des réponses très variables sur des sujets parfois complexes. Pourtant, les résultats montrent l’inverse : 
+            les positions politiques moyennes des modèles se stabilisent rapidement.
         </p>
 
         <p class="text-slate-700 mb-3">
             Dès <strong>5 à 10 exécutions</strong>, les résultats deviennent quasiment identiques. Cela signifie que malgré leur fonctionnement probabiliste,
-            les modèles ont une <strong>structure interne relativement stable</strong>.
-        </p>
-
-        <p class="text-slate-700 mb-4">
-            Seuls certains modèles comme <strong>LLaMA 3.1</strong> et <strong>DeepSeek</strong> mettent un peu plus de temps à converger,
-            notamment sur les questions économiques.
+            ils n’ont pas d’opinion, mais leurs réponses se comportent comme s’ils en avaient une,
+            car ils apprennent des <strong>régularités statistiques</strong> à partir de
+            <strong>très grandes masses de données d’entraînement</strong>.
         </p>
 
         <p class="text-sm text-slate-500 mb-4">
