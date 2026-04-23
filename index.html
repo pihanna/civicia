@@ -109,26 +109,121 @@
         </div>
 
         <!-- RÉSULTATS CLÉS + FIGURES -->
-        <h2 class="text-3xl font-bold mb-8">Résultats clés</h2>
-        <div class="grid md:grid-cols-3 gap-6 mb-12">
-            <div class="bg-white p-6 rounded-3xl shadow">
-                <div class="flex items-center gap-3 mb-4"><span class="text-3xl">📈</span><h3 class="font-semibold">Stabilité</h3></div>
-                <p class="text-slate-700">Les moyennes se stabilisent dès <strong>5 à 10 runs</strong>. Seuls LLaMA 3.1 et DeepSeek montrent une convergence plus lente sur l’axe économique.</p>
-                <a href="figures/cumulative_mean.png" target="_blank"> <img src="figures/cumulative_mean.png" alt="Figure 1 - Moyenne cumulative" class="hover-zoom w-full transition-transform duration-300 group-hover:scale-105"> </a>
-            </div>
-        
-            <div class="bg-white p-6 rounded-3xl shadow">
-                <div class="flex items-center gap-3 mb-4"><span class="text-3xl">🔄</span><h3 class="font-semibold">Cohérence idéologique</h3></div>
-                <p class="text-slate-700">Qwen et Mistral sont les plus stables. LLaMA 3.x et DeepSeek présentent les variances les plus élevées.</p>
-              <a href="figures/cumulative_mean.png" target="_blank"> <img src="figures/IA_variance_vs_instabilite.png" alt="Figure 2 - Stabilité par IA" class="hover-zoom w-full transition-transform duration-300 group-hover:scale-105"> </a>
-            </div>
-        
-            <div class="bg-white p-6 rounded-3xl shadow">
-                <div class="flex items-center gap-3 mb-4"><span class="text-3xl">🧭</span><h3 class="font-semibold">Orientation moyenne</h3></div>
-                <p class="text-slate-700">Majorité des modèles dans le quadrant <strong>gauche-libertal</strong>.<br>LLaMA 3.x plus à gauche • Grok 4.2 évolue légèrement plus à droite.</p>
-                <a href="figures/cumulative_mean.png" target="_blank"> <img src="figures/mean_positions_per_ia.png" alt="Figure 3 - Opinions moyennes" class="hover-zoom w-full transition-transform duration-300 group-hover:scale-105"> </a>
-            </div>
+<h2 class="text-3xl font-bold mb-8">Résultats clés</h2>
+
+<div class="space-y-10 mb-12">
+
+    <!-- 1. STABILITÉ -->
+    <div class="bg-white p-6 rounded-3xl shadow">
+        <div class="flex items-center gap-3 mb-4">
+            <span class="text-3xl">📈</span>
+            <h3 class="font-semibold text-xl">1. Une forte stabilité des réponses</h3>
         </div>
+
+        <p class="text-slate-700 mb-3">
+            Lorsqu’on répète plusieurs fois exactement la même question à une IA, on pourrait s’attendre à des réponses très variables.
+            Pourtant, les résultats montrent l’inverse : les positions politiques moyennes des modèles se stabilisent rapidement.
+        </p>
+
+        <p class="text-slate-700 mb-3">
+            Dès <strong>5 à 10 exécutions</strong>, les résultats deviennent quasiment identiques. Cela signifie que malgré leur fonctionnement probabiliste,
+            les modèles ont une <strong>structure interne relativement stable</strong>.
+        </p>
+
+        <p class="text-slate-700 mb-4">
+            Seuls certains modèles comme <strong>LLaMA 3.1</strong> et <strong>DeepSeek</strong> mettent un peu plus de temps à converger,
+            notamment sur les questions économiques.
+        </p>
+
+        <p class="text-sm text-slate-500 mb-4">
+            ➜ En pratique : un seul test peut être trompeur — il faut répéter pour obtenir une vision fiable.
+        </p>
+
+        <a href="figures/cumulative_mean.png" target="_blank">
+            <img src="figures/cumulative_mean.png" 
+                 alt="Figure 1 - Moyenne cumulative" 
+                 class="hover-zoom w-full transition-transform duration-300">
+        </a>
+    </div>
+
+
+    <!-- 2. COHÉRENCE -->
+    <div class="bg-white p-6 rounded-3xl shadow">
+        <div class="flex items-center gap-3 mb-4">
+            <span class="text-3xl">🔄</span>
+            <h3 class="font-semibold text-xl">2. Des IA globalement cohérentes idéologiquement</h3>
+        </div>
+
+        <p class="text-slate-700 mb-3">
+            Les modèles ne répondent pas au hasard : ils conservent une certaine logique politique d’une question à l’autre.
+        </p>
+
+        <p class="text-slate-700 mb-3">
+            Certains modèles comme <strong>Qwen</strong> et <strong>Mistral</strong> sont particulièrement stables,
+            avec très peu de variations dans leurs réponses.
+        </p>
+
+        <p class="text-slate-700 mb-3">
+            À l’inverse, des modèles comme <strong>LLaMA 3.x</strong> ou <strong>DeepSeek</strong> montrent davantage de fluctuations,
+            ce qui peut refléter une sensibilité plus forte aux mécanismes internes ou aux sujets abordés.
+        </p>
+
+        <p class="text-slate-700 mb-4">
+            La variabilité reste toutefois limitée : dans l’ensemble, les IA présentent une 
+            <strong>cohérence idéologique notable</strong>.
+        </p>
+
+        <p class="text-sm text-slate-500 mb-4">
+            ➜ En pratique : les IA ne sont pas neutres aléatoirement — elles suivent des logiques relativement consistantes.
+        </p>
+
+        <a href="figures/IA_variance_vs_instabilite.png" target="_blank">
+            <img src="figures/IA_variance_vs_instabilite.png" 
+                 alt="Figure 2 - Stabilité par IA" 
+                 class="hover-zoom w-full transition-transform duration-300">
+        </a>
+    </div>
+
+
+    <!-- 3. ORIENTATION -->
+    <div class="bg-white p-6 rounded-3xl shadow">
+        <div class="flex items-center gap-3 mb-4">
+            <span class="text-3xl">🧭</span>
+            <h3 class="font-semibold text-xl">3. Une orientation politique majoritairement similaire</h3>
+        </div>
+
+        <p class="text-slate-700 mb-3">
+            Malgré leurs différences techniques et géographiques, la majorité des modèles se positionnent dans une zone proche :
+            le quadrant <strong>gauche-libertarien</strong>.
+        </p>
+
+        <p class="text-slate-700 mb-3">
+            Cela correspond à des positions plutôt favorables à l’intervention économique et aux libertés individuelles.
+        </p>
+
+        <p class="text-slate-700 mb-3">
+            Quelques différences existent néanmoins :
+            <br>• <strong>LLaMA 3.x</strong> apparaît plus marqué à gauche
+            <br>• <strong>Grok 4.2</strong> se déplace légèrement vers le centre
+        </p>
+
+        <p class="text-slate-700 mb-4">
+            Globalement, les écarts restent limités : les modèles occupent un 
+            <strong>espace idéologique assez restreint</strong>.
+        </p>
+
+        <p class="text-sm text-slate-500 mb-4">
+            ➜ En pratique : les IA testées tendent à produire des réponses politiquement proches les unes des autres.
+        </p>
+
+        <a href="figures/mean_positions_per_ia.png" target="_blank">
+            <img src="figures/mean_positions_per_ia.png" 
+                 alt="Figure 3 - Opinions moyennes" 
+                 class="hover-zoom w-full transition-transform duration-300">
+        </a>
+    </div>
+
+</div>
         
       
         <div class="bg-amber-50 border border-amber-200 rounded-3xl p-8 mb-12">
