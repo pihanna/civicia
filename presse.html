@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Presse — CivicIA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .hero-bg { background: linear-gradient(135deg, #0f172a 0%, #1e2937 100%); }
+        .nav-link { transition: all 0.2s; }
+        .nav-link:hover { color: #3b82f6; }
+        .dl-card { transition: transform 0.2s, box-shadow 0.2s; }
+        .dl-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.10); }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans">
+
+<!-- NAVBAR -->
+<nav class="bg-white border-b shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+            <div class="w-9 h-9 bg-blue-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold">C</div>
+            <div>
+                <h1 class="text-2xl font-semibold tracking-tight">CivicIA</h1>
+                <p class="text-xs text-slate-500 -mt-1">IA &amp; Politique</p>
+            </div>
+        </div>
+        <div class="flex items-center gap-8 text-sm font-medium">
+            <a href="index.html" class="nav-link text-slate-700">Accueil</a>
+            <a href="propos.html" class="nav-link text-slate-700">À propos</a>
+            <a href="paper.pdf" target="_blank"
+               class="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-2xl text-sm font-medium transition">
+                <i class="fa-solid fa-download"></i>
+                Télécharger l'étude
+            </a>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero-bg text-white py-16">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+        <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md text-white text-sm font-medium px-4 py-2 rounded-3xl mb-6">
+            <span class="bg-emerald-400 text-emerald-950 text-xs font-bold px-2.5 py-px rounded-full">PRESSE</span>
+            Diffusion immédiate • 19 mai 2026
+        </div>
+        <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
+            Espace presse
+        </h1>
+        <p class="max-w-2xl mx-auto text-xl opacity-90">
+            Documents, contacts et ressources pour les journalistes.
+        </p>
+        <div class="mt-10 flex justify-center gap-4">
+            <a href="#documents"
+               class="px-8 py-4 bg-white text-slate-900 rounded-3xl font-semibold flex items-center gap-3 hover:scale-105 transition">
+                Accéder aux documents
+                <i class="fa-solid fa-arrow-down"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- STATS BAND -->
+<section class="bg-blue-600 text-white py-10">
+    <div class="max-w-4xl mx-auto px-6 grid grid-cols-3 gap-8 text-center">
+        <div>
+            <div class="text-4xl font-bold">13 640</div>
+            <div class="text-sm text-blue-200 mt-1 uppercase tracking-widest">réponses analysées</div>
+        </div>
+        <div class="border-x border-blue-500">
+            <div class="text-4xl font-bold">11</div>
+            <div class="text-sm text-blue-200 mt-1 uppercase tracking-widest">modèles d'IA testés</div>
+        </div>
+        <div>
+            <div class="text-4xl font-bold">20×</div>
+            <div class="text-sm text-blue-200 mt-1 uppercase tracking-widest">exécutions par modèle</div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTENU PRINCIPAL -->
+<section id="documents" class="max-w-4xl mx-auto px-6 py-14 space-y-14">
+
+    <!-- DOCUMENTS -->
+    <div>
+        <h2 class="text-3xl font-bold mb-2">Documents à télécharger</h2>
+        <p class="text-slate-500 text-sm mb-8">Tous les fichiers sont en libre accès pour usage éditorial.</p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+            <a href="communique_presse.pdf" download
+               class="dl-card bg-white rounded-3xl shadow p-6 flex items-start gap-4 text-slate-800 no-underline">
+                <div class="w-11 h-11 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600 text-xl flex-shrink-0">
+                    <i class="fa-solid fa-file-pdf"></i>
+                </div>
+                <div>
+                    <div class="font-semibold text-base mb-0.5">Communiqué de presse</div>
+                    <div class="text-xs text-slate-400 uppercase tracking-wide">PDF • 2 pages</div>
+                </div>
+            </a>
+
+            <a href="paper.pdf" download
+               class="dl-card bg-white rounded-3xl shadow p-6 flex items-start gap-4 text-slate-800 no-underline">
+                <div class="w-11 h-11 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600 text-xl flex-shrink-0">
+                    <i class="fa-solid fa-flask"></i>
+                </div>
+                <div>
+                    <div class="font-semibold text-base mb-0.5">Article scientifique complet</div>
+                    <div class="text-xs text-slate-400 uppercase tracking-wide">PDF • 20 pages</div>
+                </div>
+            </a>
+
+            <a href="fiche_QR_biais_IA.docx" download
+               class="dl-card bg-white rounded-3xl shadow p-6 flex items-start gap-4 text-slate-800 no-underline">
+                <div class="w-11 h-11 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600 text-xl flex-shrink-0">
+                    <i class="fa-solid fa-circle-question"></i>
+                </div>
+                <div>
+                    <div class="font-semibold text-base mb-0.5">Fiche questions-réponses</div>
+                    <div class="text-xs text-slate-400 uppercase tracking-wide">DOCX • 7 questions</div>
+                </div>
+            </a>
+
+            <a href="graphique_political_compass.png" download
+               class="dl-card bg-white rounded-3xl shadow p-6 flex items-start gap-4 text-slate-800 no-underline">
+                <div class="w-11 h-11 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600 text-xl flex-shrink-0">
+                    <i class="fa-solid fa-chart-scatter"></i>
+                </div>
+                <div>
+                    <div class="font-semibold text-base mb-0.5">Graphique — Position des IA</div>
+                    <div class="text-xs text-slate-400 uppercase tracking-wide">PNG • Haute résolution</div>
+                </div>
+            </a>
+
+        </div>
+
+        <div class="bg-slate-100 border border-slate-200 rounded-3xl p-6 mt-6 text-sm text-slate-600">
+            <i class="fa-solid fa-code mr-2 text-slate-400"></i>
+            <strong>Code &amp; données brutes</strong> disponibles sur demande à
+            <a href="mailto:p.hanna@free.fr" class="text-blue-600 hover:underline">p.hanna@free.fr</a>.
+        </div>
+    </div>
+
+    <!-- RÉSULTATS -->
+    <div>
+        <h2 class="text-3xl font-bold mb-8">Résultats en bref</h2>
+        <div class="space-y-4">
+
+            <div class="bg-white p-6 rounded-3xl shadow">
+                <h3 class="font-semibold text-xl mb-3">Consensus gauche-libertaire</h3>
+                <p class="text-slate-700">La quasi-totalité des IA testées se concentre dans le quadrant gauche-libertaire du Political Compass, de façon stable et reproductible d'une session à l'autre.</p>
+            </div>
+
+            <div class="bg-amber-50 border border-amber-200 rounded-3xl p-6">
+                <h3 class="font-semibold text-xl mb-3">Point d'attention : Grok 4.2</h3>
+                <p class="text-slate-700">La dernière version de l'IA d'Elon Musk (xAI) présente un déplacement mesurable vers la droite par rapport à la version précédente — sans annonce ni communication publique. L'évolution des modèles doit être suivie dans le temps.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-3xl shadow">
+                <h3 class="font-semibold text-xl mb-3">Stabilité remarquable</h3>
+                <p class="text-slate-700">Les positions convergent dès <strong>5 à 10 exécutions</strong> pour la majorité des modèles. Les IA ne répondent pas au hasard : leurs orientations politiques sont structurellement cohérentes.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-3xl shadow">
+                <h3 class="font-semibold text-xl mb-3">Un enjeu démocratique majeur</h3>
+                <p class="text-slate-700">Un sondage Ipsos BVA pour la Fondation Jean-Jaurès (2026) indique que <strong>48 % des Français</strong> envisagent d'utiliser une IA pour s'informer sur la politique, et <strong>28 %</strong> spécifiquement pour la présidentielle 2027. Ces outils ne partent pas d'une position neutre.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div>
+        <h2 class="text-3xl font-bold mb-8">Contact presse</h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+
+            <div class="bg-white rounded-3xl shadow p-6">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600 text-lg">📄</div>
+                    <div>
+                        <div class="font-semibold text-slate-800">Gabriel Hanna</div>
+                        <div class="text-xs text-slate-500">Lycée des Graves, Gradignan</div>
+                    </div>
+                </div>
+                <a href="mailto:p.hanna@free.fr" class="text-blue-600 hover:underline text-sm">
+                    <i class="fa-solid fa-envelope mr-1"></i>p.hanna@free.fr
+                </a>
+            </div>
+
+            <div class="bg-white rounded-3xl shadow p-6">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600 text-lg">📄</div>
+                    <div>
+                        <div class="font-semibold text-slate-800">Pierre Hanna</div>
+                        <div class="text-xs text-slate-500">Chercheur indépendant</div>
+                    </div>
+                </div>
+                <a href="mailto:p.hanna@free.fr" class="text-blue-600 hover:underline text-sm">
+                    <i class="fa-solid fa-envelope mr-1"></i>p.hanna@free.fr
+                </a>
+            </div>
+
+        </div>
+
+        <div class="bg-slate-100 border border-slate-200 rounded-3xl p-6 text-sm text-slate-600">
+            <i class="fa-solid fa-shield-halved mr-2 text-slate-400"></i>
+            Les auteurs déclarent n'avoir aucun conflit d'intérêts financier ou personnel en lien avec les résultats de cette étude. Cette étude a été réalisée à titre personnel et de manière entièrement indépendante, sans financement ni soutien institutionnel.
+        </div>
+    </div>
+
+    <div class="text-center py-8 border-t border-slate-200">
+        <p class="text-slate-400 text-sm">Diffusion libre pour usage éditorial • Mai 2026</p>
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-slate-900 text-slate-400 py-12">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+        <div class="flex items-center justify-center gap-3 mb-6">
+            <div class="w-9 h-9 bg-blue-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold">C</div>
+            <h1 class="text-2xl font-semibold text-white">CivicIA</h1>
+        </div>
+        <p class="text-sm">Comprendre l'influence des IA sur l'information et la vie politique.</p>
+        <p class="text-xs mt-8">© 2026 CivicIA • Espace presse • Page statique prête pour GitHub Pages</p>
+    </div>
+</footer>
+
+</body>
+</html>
